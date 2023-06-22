@@ -12,59 +12,68 @@
 <body>
   <div class="container">
     <header class="main-header">
-      <div class="header-contacts">
+      <div class="header-top">
         <p class="header-contacts-name">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78125550555" class="header-contacts-phone">+7 (812) 555-05-55</a>
+        <div class="header-contacts">
+          <div class="header-address-block">
+            <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+78125550555" class="header-contacts-phone">+7 (812) 555-05-55</a>
+          </div>
+        </div>
       </div>
       <nav class="main-navigation">
-
+        <div class="content-wrapper">
+          <a class="logo-navigation">
+            <img src="./images/logo.svg" alt="Логотип магазина Техномарт" width="220" height="50">
+          </a>
+          <form action="https://echo.htmlacademy.ru/" class="navigation-form" method="get">
+            <label class="visually-hidden" for="search">Введите текст для поиска.</label>
+            <input class="navigation-search input-enter" id="search" type="text" name="search" placeholder="Поиск"
+              required>
+          </form>
+          <ul class="user-navigation-list">
+            <li class="user-navigation-item">
+              <a href="#" class="user-navigation-link">Войти</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-wrapper">
+          <ul class="site-navigation-list">
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Главная</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Компания</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Каталог</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Новости</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Спецпредложения</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="selected-navigation">
+            <a href="#" class="selected-navigation-link">
+              <span class="visually-hidden">Избранное.</span>
+            </a>
+            <a href="#" class="selected-navigation-link">
+              <span class="visually-hidden">Корзина.</span>
+            </a>
+            <a href="#" class="selected-navigation-order">Оформить заказ</a>
+          </div>
+        </div>
       </nav>
-      <a class="logo-navigation">
-        <img src="./images/logo.svg" alt="Логотип магазина Техномарт" width="220" height="50">
-      </a>
-      <form action="https://echo.htmlacademy.ru/" class="navigation-form" method="get">
-        <label class="visually-hidden" for="search">Введите текст для поиска.</label>
-        <input class="navigation-search input-enter" id="search" type="text" name="search" placeholder="Поиск" required>
-      </form>
-      <ul class="user-navigation-list">
-        <li class="user-navigation-item">
-          <a href="#" class="user-navigation-link">Войти</a>
-        </li>
-      </ul>
-      <ul class="site-navigation-list">
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Главная</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Компания</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Каталог</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Новости</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Спецпредложения</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Доставка</a>
-        </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Контакты</a>
-        </li>
-      </ul>
-      <div class="selected-navigation">
-        <a href="#" class="selected-navigation-link">
-          <span class="visually-hidden">Избранное.</span>
-        </a>
-        <a href="#" class="selected-navigation-link">
-          <span class="visually-hidden">Корзина.</span>
-        </a>
-        <a href="#" class="selected-navigation-order">Оформить заказ</a>
-
-        </nav>
     </header>
     <main class="main-index">
       <h1 class="visually-hidden">Главная страница магазина Техномарт.</h1>
