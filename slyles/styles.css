@@ -80,7 +80,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 12px 40px 13px;
+  padding: 12px 50px 13px;
 }
 
 .header-contacts {
@@ -156,8 +156,8 @@ body {
 .top-navigation-wrapper {
   width: 1170px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   justify-content: space-between;
   align-self: center;
@@ -214,8 +214,8 @@ body {
   width: 1170px;
   margin: 0 auto;
   margin-top: -4px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 7px;
 }
 
@@ -356,8 +356,8 @@ body {
 
 .promo-block {
   width: 1170px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: 0 auto;
 
 }
@@ -366,7 +366,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 180px);
-  gap: 30px;margin-bottom: 50px;
+  gap: 30px;
 }
 
 .promo-item {
@@ -593,8 +593,7 @@ body {
 .index-catalog {
   width: 1170px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 50px 50px 53px;
 }
 
 .catalog-title {
@@ -730,7 +729,7 @@ body {
 }
 
 .producer-name {
-  margin-bottom: 17px ;
+  margin-bottom: 16px ;
 }
 
 .filter-label {
@@ -836,10 +835,11 @@ body {
 .catalog-product-list {
   margin: 0;
   padding: 0;
+  margin-bottom: 28px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px 33px;
+  gap: 23px 33px;
 }
 
 .product-item {
@@ -849,12 +849,12 @@ body {
   align-items: center;
   min-height: 386px;
   box-sizing: border-box;
-  padding: 27px;
+  padding: 28px 27px;
 }
 
 .product-image {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .product-about {
@@ -870,7 +870,7 @@ body {
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 27px;
   color: #293449;
   width: 210px;
   text-align: center;
@@ -1026,6 +1026,150 @@ text-transform: uppercase;
   border-color: #c5c5c5;
   color: #c5c5c5;
 }
+ .paganation {
+  width: 655px;
+  display: flex;
+  gap: 17px;
+  margin-left: auto;
+ }
+
+ .paganation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+ }
+
+.paganation-link {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #3d546f;
+  border-radius: 2px;
+  color: #ffffff;
+  font-weight: 700;
+  min-width: 50px;
+  height: 45px;
+  padding: 11px
+}
+
+.paganation-link:hover,
+.paganation-link:focus {
+  outline: none;
+  background-color: #32425c;
+  color: #c5c5c5;
+}
+
+.paganation-link:active {
+  background-color: #32425c;
+  color: #ffffff;
+}
+
+.paganation-link-current,
+.paganation-link-current:hover,
+.paganation-link-current:focus,
+.paganation-link-current:active {
+  color: #3d546f;
+  background-color: #ffffff;
+}
+
+.paganation-more {
+  display: inline-block;
+  background-color: #ee3643;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 14px 20px 13px;
+  border-radius: 2px;
+  min-width: 195px;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.paganation-more:hover,
+.paganation-more:focus {
+  background-color: #ca2c37;
+  outline: none;
+}
+
+.paganation-more:active {
+  background-color: #ba2732;
+}
+
+.services {
+  background-color: #f4f7f9;
+}
+
+.services-block {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 52px 50px 53px 50px;
+}
+
+.services-title {
+  margin: 0 auto;
+  text-align: center;
+  width: 550px;
+  margin-bottom: 28px;
+}
+
+.services-subtitle {
+  padding: 0;
+  margin: 0 auto;
+  width: 560px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 64px;
+}
+
+.services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.services-item {
+  padding: 160px 39px 50px 31px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.services-item:nth-child(3n+2) .services-item-description {
+  margin-left: 4px;
+}
+
+
+.services-item-name {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-item-description {
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+
+
 
 
 
