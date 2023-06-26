@@ -1144,12 +1144,25 @@ text-transform: uppercase;
   padding: 160px 39px 50px 31px;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: top 25px left 31px;
 }
 
 .services-item:nth-child(3n+2) .services-item-description {
   margin-left: 4px;
 }
 
+.services-delivery {
+  background-image: url("../images/delivery-red.svg");
+}
+
+.services-warranty {
+  background-image: url("../images/sale-red.svg");
+}
+
+.services-credit {
+  background-image: url("../images/paints-red.svg");
+}
 
 .services-item-name {
   margin: 0;
@@ -1168,6 +1181,62 @@ text-transform: uppercase;
   line-height: 24px;
 }
 
+.about-block-wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 52px 50px 49px;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  gap: 50px 170px;
+  color: #293449;
+}
+
+.about-title {
+  margin-bottom: 22px;
+}
+
+.about-text {
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+.about-text + .about-text {
+  margin-top: 26px;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 45px;
+  min-width: 195px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #ee3643;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.about-link:hover,
+.about-link:focus {
+  outline: none;
+  background-color: #ca2c37;
+}
+
+.about-link:active {
+  background-color: #ba2732;
+}
+
+.contacts-text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+}
 
 
 
