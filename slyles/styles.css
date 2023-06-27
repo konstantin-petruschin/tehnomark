@@ -86,6 +86,30 @@
   background-color: #be8d32b4;
 }
 
+.input-enter {
+  border: 1px solid#3d546f;
+  color: #3d546f;
+  background-color:#ffffff;
+}
+
+.input-enter:hover {
+  border-color:#63a63e;
+  color: #293449;
+}
+
+.input-enter:focus {
+  outline: 1px solid #ffbf47;
+}
+
+.input-enter:not(:placeholder-shown) {
+  border-color: #ff3d3d;
+}
+
+.input-enter:invalid:hover:not(:placeholder-shown) {
+  border-color: #ff3d3d;
+  outline: 1px solid #ff3d3d;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -209,13 +233,13 @@ body {
   padding-right: 23px;
   display: flex;
   justify-content: space-between;
-  align-self: center;
-  flex-wrap: wrap;
+
 }
 
 .navigation-search-block {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .navigation-form {
@@ -528,6 +552,11 @@ body {
   display: block;
 }
 
+.slider-text {
+  margin-bottom: 30px;
+  min-height: 225px;
+}
+
 .slider-title {
   padding: 0;
   margin: 0;
@@ -539,10 +568,9 @@ body {
   color: #ffffff;
 }
 
-.slider-text {
+.slider-subtitle {
   margin: 0;
   padding: 0;
-  margin-bottom: 178px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
@@ -551,7 +579,7 @@ body {
 .slider-content {
   position: relative;
   z-index: 1;
-  padding: 48px 23px 40px;
+  padding: 48px 50px 40px;
 }
 
 .slider-image-block {
@@ -563,6 +591,9 @@ body {
 
 .slider-image {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider-flip-button {
@@ -578,6 +609,24 @@ body {
   border: 1px solid transparent;
   top: 178px;
   cursor: pointer;
+}
+
+.slider-flip-button:hover,
+.slider-flip-button:focus {
+  background-color: rgb(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.slider-flip-button svg {
+  fill: #ffffff;
+}
+
+.slider-flip-button:hover svg {
+  fill:#293449;
+}
+
+.slider-flip-button:active {
+  opacity: 0.2;
 }
 
 .slider-button-prev {
@@ -603,6 +652,15 @@ body {
   color: #ffffff;
   background-color: #ee3643;
   border-radius: 4px;
+}
+
+.slider-link:hover,
+.slider-link:focus {
+  background-color: #ca2c37;
+}
+
+.slider-link:active {
+  background-color: #ba2732;
 }
 
 .slider-paganation {
@@ -860,8 +918,10 @@ body {
   border-radius: 50%;
 }
 
-.filter-control:hover {
-  opacity: 0.6;
+
+.filter-control [type="checkbox"]:not(:disabled) + .filter-control-mark,
+.filter-control [type="radio"]:not(:disabled) + .filter-control-mark {
+  opacity: 1;
 }
 
 .filter-control [type="checkbox"]:focus + .filter-control-mark::after,
@@ -887,10 +947,23 @@ body {
 }
 
 .filter-control:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-control-input:disabled + .filter-control-mark,
+.filter-control-input:disabled ~ .filter-label,
+.filter-control-input:disabled + .filter-control-mark:hover,
+.filter-control-input:disabled ~ .filter-label:hover,
+.filter-control-input:disabled + .filter-control-mark:active,
+.filter-control-input:disabled ~ .filter-label:active {
+  color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 
+.filter-control [type="radio"]:disabled + .filter-control-mark::before{
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 .filter-button-submit {
   display: inline-block;
@@ -1605,6 +1678,10 @@ text-transform: uppercase;
   z-index: 20;
 }
 
+ .modal-close {
+  display: none;
+}
+
 .modal-enter {
   position: relative;
   width: 363px;
@@ -1612,6 +1689,7 @@ text-transform: uppercase;
   border-radius: 2px;
   padding: 21px 26px 35px 33px;
   box-sizing: border-box;
+  background-color: #ffffff;
 }
 
 .enter-heading {
@@ -1624,17 +1702,21 @@ text-transform: uppercase;
   margin-bottom: 45px;
 }
 
-.modal-close-button {
+.modal-close-enter,
+.modal-close-account {
   position: absolute;
-  padding: 0;
+  top: 18px;
+  right: 20px;
   width: 20px;
   height: 20px;
-  top: 18px;
-  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  outline: none;
 }
 
 .modal-close-button:hover,
@@ -1649,7 +1731,7 @@ text-transform: uppercase;
 
 .enter-account-label + .enter-account-label {
   margin-top: 7px;
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 }
 
 .enter-account-form {
@@ -1681,6 +1763,15 @@ text-transform: uppercase;
   text-decoration: none;
 }
 
+.account-help-link:hover,
+.account-help-link:focus {
+  opacity: 0.6;
+}
+
+.account-help-link:active {
+  opacity: 0.3;
+}
+
 .enter-buttons-block {
   display: flex;
   list-style: none;
@@ -1705,9 +1796,10 @@ text-transform: uppercase;
 }
 
 .enter-link {
-  padding: 11px 35px 11px 55px;
+  padding: 11px 35px 11px 52px;
   color: #ffffff;
   background-color: #63a63e;
+  border: none;
 }
 
 .enter-link::before {
@@ -1716,8 +1808,8 @@ text-transform: uppercase;
   background: url("../images/login.svg") no-repeat;
   width: 15px;
   height: 15px;
-  left: 23px;
-  top: 12px;
+  left: 25px;
+  top: 14px;
 }
 
 .enter-link:hover,
@@ -1745,6 +1837,90 @@ text-transform: uppercase;
   border-color: #c5c5c5;
 }
 
+.enter-close {
+  display: none;
+}
+
+.modal-acount-container {
+  position: absolute;
+  top: 15px;
+  right: 2px;
+  z-index: 20;
+}
+
+.modal-acount {
+  position: relative;
+  width: 363px;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 21px 26px 35px 33px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.modal-heading {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 37px;
+}
+
+.user-buttons-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.user-orders-link,
+.personal-link {
+  text-decoration: none;
+  color: #3d546f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-orders-link:hover,
+.personal-link:hover,
+.user-orders-link:focus,
+.personal-link:focus {
+  color:#5fbb2d;
+  outline: none;
+  text-decoration: underline;
+}
+
+.user-orders-link:active,
+.personal-link:active {
+  opacity: 0.3;
+}
+
+.user-exit-link {
+  border: 2px solid #63a63e;
+  padding: 10px 43px 9px;
+  color: #32425c;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-exit-link:hover,
+.user-exit-link:focus {
+  border-color: #32425c;
+}
+
+.user-exit-link:active {
+  color: #c5c5c5;
+  border-color: #c5c5c5;
+}
 
 
 
