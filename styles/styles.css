@@ -663,7 +663,7 @@ body {
   background-color: #ba2732;
 }
 
-.slider-paganation {
+.slider-pagination {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -678,7 +678,7 @@ body {
   z-index: 10;
 }
 
-.slider-paganation-button {
+.slider-pagination-button {
   display: block;
   padding: 0;
   margin: 0;
@@ -691,7 +691,7 @@ body {
   cursor: pointer;
 }
 
-.slider-paganation-current {
+.slider-pagination-current {
   background-color: #ffffff;
 }
 
@@ -990,6 +990,15 @@ body {
   color: #ffffff;
 }
 
+.filter-button-submit:disabled,
+.filter-button-submit:disabled:hover,
+.filter-button-submit:disabled:focus,
+.filter-button-submit:disabled:active {
+  cursor: default;
+  color: #c5c5c5;
+  background-color: #ffffff;
+  border-color: #c5c5c5;
+}
 
 
 .product-sorting {
@@ -1003,6 +1012,7 @@ body {
   box-sizing: border-box;
   padding: 10px 15px;
   appearance: none;
+  background-color: #ffffff;
   background-image: url("../images/select.svg");
   background-repeat: no-repeat;
   background-position: top 16px right 11px;
@@ -1142,7 +1152,7 @@ text-transform: uppercase;
   width: 100%;
   background-color: rgba(240, 240, 240, 0.8);
   z-index: 6;
-  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
 }
 
 .product-price:hover,
@@ -1233,14 +1243,15 @@ text-transform: uppercase;
   border-color: #c5c5c5;
   color: #c5c5c5;
 }
- .paganation {
+
+ .pagination {
   width: 655px;
   display: flex;
   gap: 17px;
   margin-left: auto;
  }
 
- .paganation-list {
+ .pagination-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1249,7 +1260,7 @@ text-transform: uppercase;
   gap: 8px;
  }
 
-.paganation-link {
+.pagination-link {
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -1263,27 +1274,27 @@ text-transform: uppercase;
   padding: 11px
 }
 
-.paganation-link:hover,
-.paganation-link:focus {
+.pagination-link:hover,
+.pagination-link:focus {
   outline: none;
   background-color: #32425c;
   color: #c5c5c5;
 }
 
-.paganation-link:active {
+.pagination-link:active {
   background-color: #32425c;
   color: #ffffff;
 }
 
-.paganation-link-current,
-.paganation-link-current:hover,
-.paganation-link-current:focus,
-.paganation-link-current:active {
+.pagination-link-current,
+.pagination-link-current:hover,
+.pagination-link-current:focus,
+.pagination-link-current:active {
   color: #3d546f;
   background-color: #ffffff;
 }
 
-.paganation-more {
+.pagination-more {
   display: inline-block;
   background-color: #ee3643;
   text-decoration: none;
@@ -1301,13 +1312,13 @@ text-transform: uppercase;
   align-self: flex-start;
 }
 
-.paganation-more:hover,
-.paganation-more:focus {
+.pagination-more:hover,
+.pagination-more:focus {
   background-color: #ca2c37;
   outline: none;
 }
 
-.paganation-more:active {
+.pagination-more:active {
   background-color: #ba2732;
 }
 
@@ -1349,7 +1360,7 @@ text-transform: uppercase;
 
 .services-item {
   padding: 160px 39px 50px 31px;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   background-repeat: no-repeat;
   background-position: top 25px left 31px;
@@ -1605,7 +1616,6 @@ text-transform: uppercase;
   border: 1px solid #63a63e;
   box-sizing: border-box;
   border-radius: 2px 0 0 2px;
-  box-sizing: border-box;
   font-size: 14px;
   background-color: #ffffff;
   letter-spacing: -0.3px;
@@ -1685,7 +1695,7 @@ text-transform: uppercase;
 .modal-enter {
   position: relative;
   width: 363px;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   padding: 21px 26px 35px 33px;
   box-sizing: border-box;
@@ -1841,17 +1851,17 @@ text-transform: uppercase;
   display: none;
 }
 
-.modal-acount-container {
+.modal-account-container {
   position: absolute;
   top: 15px;
   right: 2px;
   z-index: 20;
 }
 
-.modal-acount {
+.modal-account {
   position: relative;
   width: 363px;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   padding: 21px 26px 35px 33px;
   box-sizing: border-box;
